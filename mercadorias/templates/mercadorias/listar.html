@@ -1,0 +1,8 @@
+<h2>Lista de Mercadorias</h2>
+<ul>
+    {% for mercadoria in mercadorias %}
+        <li>{{ mercadoria.nome }} - {{ mercadoria.quantidade }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'cadastrar_mercadoria' %}">Cadastrar nova mercadoria</a>
+

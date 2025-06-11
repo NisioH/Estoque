@@ -1,0 +1,7 @@
+<h2>Cadastrar Mercadoria</h2>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Cadastrar</button>
+</form>
+<a href="{% url 'listar_mercadorias' %}">Voltar</a>
