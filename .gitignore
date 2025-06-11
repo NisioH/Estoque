@@ -1,0 +1,22 @@
+# Arquivos do sistema
+__pycache__/
+*.pyc
+*.pyo
+
+# Banco de dados SQLite
+db.sqlite3
+
+# Configuração do ambiente virtual
+venv/
+.venv/
+.env
+
+# Arquivos do Django
+*.log
+media/
+static/
+
+# Configuração do IDE
+.vscode/
+.idea/
+*.swp
