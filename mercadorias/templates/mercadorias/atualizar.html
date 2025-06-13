@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Atualizar Mercadoria{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">Atualizar Mercadoria: {{ mercadoria.nome }}</h2>
+<form method="POST" class="p-4 border rounded bg-light">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- ✅ Renderiza o formulário -->
+    <button type="submit" class="btn btn-success">Salvar Alterações</button>
+</form>
+
+<!-- Botão de Voltar -->
+<form action="{% url 'listar_mercadorias' %}" method="get">
+    <button type="submit" class="btn btn-secondary">Voltar</button>
+</form>
+{% endblock %}

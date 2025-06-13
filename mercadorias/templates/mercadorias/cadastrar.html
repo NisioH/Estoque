@@ -1,7 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastrar Mercadoria{% endblock %}
+
+{% block content %}
 <h2>Cadastrar Mercadoria</h2>
-<form method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Cadastrar</button>
-</form>
-<a href="{% url 'listar_mercadorias' %}">Voltar</a>
+  <form method="POST" class="p-4 border rounded bg-light">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+
+  <form action="{% url 'listar_mercadorias' %}" method="get">
+    <button type="submit" class="btn btn-secondary">Voltar</button>
+  </form>
+
+{% endblock %}
